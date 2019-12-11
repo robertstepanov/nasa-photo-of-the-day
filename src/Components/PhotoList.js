@@ -3,7 +3,7 @@ import axios from "axios";
 import PhotoCard from "./PhotoCard";
 
 export default function PhotoList() {
-  const [photos, setPhotos] = useState([]);
+  const [photos, setPhotos] = useState(Object);
 
   useEffect(() => {
     axios
@@ -12,7 +12,7 @@ export default function PhotoList() {
       )
       .then(response => {
         console.log(response.data);
-        // setPhotos(response.data);
+        setPhotos(response.data);
       })
       .catch(error => {
         console.log("The image was not returned", error);
@@ -21,9 +21,12 @@ export default function PhotoList() {
 
   return (
     <div>
-      {photos.map(photo => {
-        return <PhotoCard date={photo.date} title={photo.title} />;
-      })}
+      <PhotoCard
+        title={photos.title}
+        date={photos.date}
+        src={photos.hdurl}
+        explanation={photos.explanation}
+      />
     </div>
   );
 }
