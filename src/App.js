@@ -1,22 +1,22 @@
 import React from "react";
 import PhotoList from "./Components/PhotoList";
+import styled from "styled-components";
 // import logo from "./assets/earth-from-space.jpg";
 
 import "./App.css";
 
+const TitleH1 = styled.h1`
+  text-align: center;
+`;
+
 function App() {
   return (
-    <div className="App">
-      {/* <header>
-        <img src={logo} alt="earth from space" />
-      </header> */}
-      {/* <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p> */}
-      <h1>NASA Photo Of The Day!</h1>
-      <PhotoList />
-    </div>
+    <>
+      <TitleH1>NASA Photo Of The Day!</TitleH1>
+      <div>
+        <PhotoList />
+      </div>
+    </>
   );
 }
 
