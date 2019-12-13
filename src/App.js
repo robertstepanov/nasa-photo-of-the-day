@@ -7,6 +7,9 @@ import "./App.css";
 
 const TitleH1 = styled.h1`
   text-align: center;
+  color: #fff;
+  font-family: "Titillium Web", sans-serif;
+  margin: 2rem auto;
 `;
 
 function App() {

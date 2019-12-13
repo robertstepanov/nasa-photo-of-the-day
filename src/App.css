@@ -10,8 +10,16 @@
   margin: 0 auto;
 }
 
-.btn {
-  margin: 0 auto;
+.image-size {
+  height: 450px;
+}
+
+html {
+  background: #000019;
+}
+#root {
+  background: #000019;
+  /* height: 100vh; */
 }
 
 /* .App-logo {

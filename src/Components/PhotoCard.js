@@ -12,12 +12,22 @@ import {
 
 const CenterContent = styled.div`
   text-align: center;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+`;
+
+const ButtonCenter = styled.a`
+  margin-left: 20rem;
 `;
 
 const PhotoCard = props => {
   return (
     <Card className="card-wrapper">
-      <CardImg src={props.src} alt="daily nasa snapshot" />
+      <CardImg
+        className="image-size"
+        src={props.src}
+        alt="daily nasa snapshot"
+      />
       <CardBody>
         <CardTitle>
           <CenterContent>Photo Date: {props.date}</CenterContent>
@@ -26,11 +36,13 @@ const PhotoCard = props => {
           <CenterContent>Title: {props.title}</CenterContent>
         </CardSubtitle>
         <CardText>
-          <CenterContent>Explanation: {props.explanation}</CenterContent>
+          <CenterContent>{props.explanation}</CenterContent>
         </CardText>
-        <a href="https://www.nasa.gov/" target="_blank">
-          <Button color="success">Learn More</Button>
-        </a>
+        <ButtonCenter>
+          <a href="https://www.nasa.gov/" target="_blank">
+            <Button color="dark">Learn More</Button>
+          </a>
+        </ButtonCenter>
       </CardBody>
     </Card>
   );
